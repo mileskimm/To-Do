@@ -66,18 +66,7 @@ h3{
   padding: 18px 25px;
   justify-content: center;
 }
-/* .filters button{
-  margin: 0 8px;
-  font-size: 17px;
-  color: #444444;
-  cursor: pointer;
-}
-.filters button:first-child{
-  margin-left: 0;
-}
-.filters button.active{
-  color: #3C87FF;
-} */
+
 #btn{
   border: none;
   opacity: 0.6;
@@ -91,201 +80,49 @@ h3{
   transition: transform 0.25s ease;
   background: linear-gradient(135deg, #1798fb 0%, #2D5CFE 100%);
 }
-.task-box, #in-progress, #completed-tasks{
-  margin-top: 20px;
-  margin-right: 5px;
-  padding: 0 20px 10px 25px;
-}
-.task-box , #in-progress.overflow{
-  overflow-y: auto;
-  max-height: 300px;
-}
-#todo{
-  margin: 10px;
-}
-#in-progress .btn-delete{
-  background: #b62222;
-  border: 1px solid #333;
+.btn-delete{
+  border: none;
+  opacity: 0.6;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 13px;
+  padding: 7px 13px;
+  margin:5px;
   border-radius: 4px;
-  padding: 4px;
+  letter-spacing: 0.3px;
+  transition: transform 0.25s ease;
+  background: linear-gradient(135deg, #e60909 0%, #a10a0a 100%);
+}
+.btn-complete{
+  border: none;
+  opacity: 0.6;
+  outline: none;
+  color: #fff;
   cursor: pointer;
-}
-#in-progress label{
-  font-size:20px;
-  margin-right: 10px;
-  text-transform: uppercase;
-}
-#in-progress input{
-  margin: 10px;
-  float: left;
-  cursor: pointer;
-}
-#in-progress .btn-complete{
-  background:rgb(68, 211, 68);
-  border: 1px solid #333;
+  font-size: 13px;
+  padding: 7px 13px;
+  margin:5px;
   border-radius: 4px;
-  padding: 4px;
-  cursor: pointer;
+  letter-spacing: 0.3px;
+  transition: transform 0.25s ease;
+  background: linear-gradient(135deg, #06ca16 0%, #055f1c 100%);
 }
-#completed-tasks .btn-delete{
-  background: #b62222;
-  border: 1px solid #333;
-  border-radius: 15%;
-  padding: 4px;
-  cursor: pointer;
-  display: none;
+ul{
+  padding: 20px;
 }
-#completed-tasks .btn-complete{
-  background:rgb(68, 211, 68);
-  border: 1px solid #333;
-  border-radius: 15%;
-  padding: 4px;
-  cursor: pointer;
-  display: none;
+#lists li{
+  
 }
-#completed-tasks label{
-  font-size:20px;
-  margin-right: 10px;
+#lists li label{
   text-transform: uppercase;
+  font-size: 20px;
 }
-#completed-tasks li{
-  background-color: rgb(68, 211, 68);
-}
-#completed-tasks input{
-  margin: 10px;
-  float: left;
-  cursor: pointer;
-}
-.task-box ::-webkit-scrollbar{
-  width: 5px;
-}
-.task-box::-webkit-scrollbar-track{
-  background: #f1f1f1;
-  border-radius: 25px;
-}
-.task-box::-webkit-scrollbar-thumb{
-  background: #e6e6e6;
-  border-radius: 25px;
-}
-.task-box .task{
-  list-style: none;
-  font-size: 17px;
-  margin-bottom: 18px;
-  padding-bottom: 16px;
-  align-items: flex-start;
-  border-bottom: 1px solid #ccc;
-}
-.task-box .task:last-child{
-  margin-bottom: 0;
-  border-bottom: 0;
-  padding-bottom: 0;
-}
-.task-box .task label{
-  display: flex;
-}
-.task-box label{
-  font-size:20px;
-  margin-right: 10px;
-  text-transform: uppercase;
-}
-.task-box input{
-  margin: 10px;
-  float: left;
-  cursor: pointer;
-}
-.task-box .btn-delete{
-  background: #b62222;
-  border: 1px solid #333;
-  border-radius: 15%;
-  padding: 4px;
-  cursor: pointer;
-  text-align: right;
-}
-.task-box .btn-complete{
-  display: none;
-}
+#lists li label input{
+  float:left;
+  margin: 8px 7px 5px 0;
 
-.task label input{
-  margin-top: 7px;
-  accent-color: rgb(60, 135, 255);
 }
-.task label p{
-  user-select: none;
-  margin-left: 12px;
-  word-wrap: break-word;
-}
-.task label p.checked{
-  text-decoration: line-through;
-}
-.task-box .settings{
-  position: relative;
-}
-.settings :where(i, li){
-  cursor: pointer;
-}
-.settings .task-menu{
-  z-index: 10;
-  right: -5px;
-  bottom: -65px;
-  padding: 5px 0;
-  background: #fff;
-  position: absolute;
-  border-radius: 4px;
-  transform: scale(0);
-  transform-origin: top right;
-  box-shadow: 0 0 6px rgba(0,0,0,0.15);
-  transition: transform 0.2s ease;
-}
-.task-box .task:last-child .task-menu{
-  bottom: 0;
-  transform-origin: bottom right;
-}
-.task-box .task:first-child .task-menu{
-  bottom: -65px;
-  transform-origin: top right;
-}
-.task-menu.show{
-  transform: scale(1);
-}
-.task-menu li{
-  height: 25px;
-  font-size: 16px;
-  margin-bottom: 2px;
-  padding: 17px 15px;
-  cursor: pointer;
-  justify-content: flex-start;
-}
-.task-menu li:last-child{
-  margin-bottom: 0;
-}
-.settings li:hover{
-  background: #f5f5f5;
-}
-.settings li i{
-  padding-right: 8px;
-}
-@media (max-width: 400px) {
-  body{
-    padding: 0 10px;
-  }
-  .wrapper {
-    padding: 20px 0;
-  }
-  .filters span{
-    margin: 0 5px;
-  }
-  .task-input-wrapper{
-    padding: 0 20px;
-  }
-  .controls{
-    padding: 18px 20px;
-  }
-  .task-box{
-    margin-top: 20px;
-    margin-right: 5px;
-    padding: 0 15px 10px 20px;
-  }
-  .task label input{
-    margin-top: 4px;
-  }
+.list_Complete li{
+background-color: #98f5a0;
 }

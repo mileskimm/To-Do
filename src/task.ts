@@ -6,7 +6,7 @@ export enum TaskStatus{
 }
 
 export class Task  {
-    id: number = 0;
+    id = 0;
     title: string;
     status: TaskStatus;
     createdAt: Date;
@@ -16,4 +16,6 @@ export class Task  {
         this.title = title;
         this.status = status;
     }
-  }
+
+
+}
